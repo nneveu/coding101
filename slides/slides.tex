@@ -1,15 +1,38 @@
-\documentclass[xcolor=dvipsnames]{beamer} 
-
+\documentclass[xcolor=dvipsnames, professionalfonts,t]{beamer} 
+\usetheme{Dresden} 
+\usepackage{url}
 \setbeamersize{text margin left=10pt}
 \setbeamersize{text margin right=10pt}
+%\usepackage{beamerthemesplit}              %
+\beamertemplateballitem % fancy bullets and numbering
+
+\setbeamertemplate{navigation symbols}{}   % suppress navigation symbols
+\addtobeamertemplate{frametitle}{}{%
+	\logo{Argonne_cmyk_black-eps-converted-to}
+
+}
+
+\title[September 2018]{\vspace{-1em}Coding 101 }
+\author[K. Woodruff, N.Neveu]{{\Large{Katherine Woodruff} \\ \small{New Mexico State University} \\
+		\url{kwoodruf@nmsu.edu} \\ \vspace{1em} \Large{Nicole Neveu} \\ \small{Illinois Institute of Technology}   \\ \url{nneveu@hawk.iit.edu}    }} \vspace{-5em}
+\institute[] % (optional, but mostly needed)
+{   
+	  
+}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+\date{ \today \\
+	\includegraphics[width=3cm,keepaspectratio]{/home/nicole/Documents/presentations/logos/Argonne_cmyk_black}%
+	\hfill \hfill \hfill%
+	\includegraphics[width=4cm,keepaspectratio]{FNAL}%
+}
 
 \begin{document}
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
+
 \begin{frame}
-    \begin{center}
-        \Large{Coding 101}
-    \end{center}
+\titlepage
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Installing Python}
@@ -32,7 +55,36 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+\frametitle{Exercise:}
+\begin{itemize}
+	\item Download or clone the following repository: 
+	\begin{itemize}
+		\item \url{https://github.com/nneveu/coding101}
+	\end{itemize}
+	\item Open the "\textbf{emittance\_calc.py}" file
+	\item Begin exercise!
+	\item N = number of particles
+	\vspace{-1em}
+	
+	\begin{equation}
+		\text{\textcolor{blue}{Beam Size}} \quad \sigma_x^2 = \frac{\Sigma x^2}{N} - \left(\frac{\Sigma x}{N}\right)^2
+	\end{equation}
+	\begin{equation}
+	\text{\textcolor{blue}{Momentum}} \quad \sigma_{p_x}^2 = \frac{\Sigma p_x^2}{N} - \left(\frac{\Sigma p_x}{N}\right)^2
+	\end{equation}
+	\begin{equation}
+	\text{\textcolor{blue}{Corelation}} \quad \sigma_{xp_x} = \frac{\Sigma \left(x\,p_x\right)}{N} - \left(\frac{\Sigma x}{N}\right)\left(\frac{\Sigma p_x}{N}\right)
+	\end{equation}
+	\begin{equation}\label{eq:emittance}
+	\begin{aligned}
+	\text{\textcolor{blue}{Emittance}} \quad
+	\epsilon_n = \sqrt{\sigma_x^2\, \sigma_{p_x}^2 -\sigma_{xp_x}^2}
+	\end{aligned}
+	\end{equation}
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%
 \end{document}
