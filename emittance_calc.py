@@ -15,10 +15,10 @@ Load the h5 dataset
 '''
 #print(f.keys())
 #print(f['Step#0'].keys())
-#print(f['Step#0']).get("ptype").shape
+#print(f['Step#0'].get("ptype").shape)
 
 '''
-2. Make a scatter plot of 2 variables in the data set
+2. Make three scatter plots of 2 variables in the data set
 2a. Label your axes
 '''
 # Get x and y from the first step:
@@ -30,13 +30,13 @@ Load the h5 dataset
 #plt.scatter(x0_vector,y0_vector,s=2)
 #plt.xlabel('x [m]')
 #plt.xlabel('y [m]')
-
+#plt.show()
 '''
-3. Make histograms of the data
+3. Make three histograms of the data
 '''
 #plt.figure()
 #plt.hist(x0_vector,bins=50)
-
+#plt.show()
 '''
 4. Calculate the x, and px mean
 '''
